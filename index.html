@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cifrador César</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🔐 Cifrador César</h1>
+        <p class="description">Cifra y descifra mensajes usando el método César</p>
+        
+        <div class="input-section">
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" placeholder="Escribe tu mensaje aquí..." rows="4"></textarea>
+            
+            <div class="control-group">
+                <label for="desplazamiento">Desplazamiento (1-25):</label>
+                <input type="number" id="desplazamiento" min="1" max="25" value="3">
+            </div>
+            
+            <div class="button-group">
+                <button id="cifrarBtn" class="btn btn-primary">🔒 Cifrar</button>
+                <button id="descifrarBtn" class="btn btn-secondary">🔓 Descifrar</button>
+                <button id="limpiarBtn" class="btn btn-clear">🗑️ Limpiar</button>
+            </div>
+        </div>
+        
+        <div class="output-section">
+            <label>Resultado:</label>
+            <div id="resultado" class="resultado"></div>
+            <button id="copiarBtn" class="btn btn-copy">📋 Copiar</button>
+        </div>
+        
+        <div class="info-section">
+            <h3>ℹ️ ¿Cómo funciona?</h3>
+            <p>El cifrado César desplaza cada letra del alfabeto un número determinado de posiciones.</p>
+            <p><strong>Ejemplo:</strong> Con desplazamiento 3, "ABC" se convierte en "DEF"</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
